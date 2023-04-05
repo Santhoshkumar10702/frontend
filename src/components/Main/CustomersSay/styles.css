@@ -1,0 +1,21 @@
+#testimonials {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 72px;
+  flex-direction: column;
+  padding-bottom: 72px;
+  background-color: #d9d9d9;
+}
+
+#testimonials .ratings {
+  display: flex;
+  font-display: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 960px;
+  margin-bottom: 69px;
+  background-color: red;
+}
