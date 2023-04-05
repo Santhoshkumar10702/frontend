@@ -12,6 +12,7 @@
      flex-direction: row;
      max-width: 960px;
      width: 100%;
+     position: relative;
      justify-content: space-between;
  }
 
@@ -33,9 +34,7 @@
      color: #FFFFFF;
  }
 
- #main-container div {
-     max-width: 422px;
- }
+
 
  #main-container div p {
      font-family: Roboto;
@@ -43,4 +42,43 @@
      font-size: 20px;
      color: #000000;
      margin-bottom: 72px;
+ }
+
+ #main-container div button {
+     background-color: #F4CE14;
+     border: 0;
+     border-radius: 16px;
+     padding: 19px 24px;
+     margin-bottom: 28px;
+     font-family: Roboto;
+     font-weight: 700;
+ }
+
+ #main-img {
+     flex: 1;
+     position: relative;
+ }
+
+ #main-container img {
+     width: 375px;
+     height: 438px;
+     position: absolute;
+     margin-top: 24px;
+     border-radius: 16px;
+ }
+
+ #main-left-section {
+     flex: 1
+ }
+
+ @media screen and (max-width: 736px) {
+     #main-img {
+         flex: 1.2;
+         position: relative;
+     }
+
+     #main-container img {
+         width: 100%;
+
+     }
  }

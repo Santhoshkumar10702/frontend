@@ -1,7 +1,7 @@
+import { Logo } from '../../icons_assets'
 import Nav from '../Nav'
 import './styles.css'
 
-import { ReactComponent as Logo } from '../../icons_assets/Logo.svg'
 
 function Header() {
   return (

@@ -1,19 +1,21 @@
+import { restaurantFood } from '../../icons_assets'
 import './styles.css'
 
 function Main() {
   return (
     <main>
       <div id='main-container'>
-        <div>
+        <div id='main-left-section'>
           <h1>Little Lemon</h1>
           <h3>Chicago</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
+          <button>Reserve a table</button>
         </div>
-        <div>
-          <h1>Little Lemon</h1>
-          <h3>Chicago</h3>
+        <div id='main-img'>
+          <img src={restaurantFood} />
+
         </div>
       </div>
     </main>

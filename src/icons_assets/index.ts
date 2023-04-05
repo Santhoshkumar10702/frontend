@@ -1,3 +1,4 @@
-const logo = require('./Logo.svg')
+import { ReactComponent as Logo } from './Logo.svg'
+import restaurantFood from './restauranfood.jpg'
 
-export { logo }
+export { Logo, restaurantFood }
