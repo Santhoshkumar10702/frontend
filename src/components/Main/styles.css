@@ -20,7 +20,6 @@
    max-width: 960px;
    padding-left: 16px;
    padding-right: 16px;
-
    position: relative;
    justify-content: space-between;
  }
@@ -53,15 +52,16 @@
    margin-bottom: 72px;
  }
 
- #main-container div button {
+ .main-button {
    background-color: #F4CE14;
    border: 0;
    border-radius: 16px;
    padding: 19px 24px;
-   margin-bottom: 28px;
    font-family: Roboto;
    font-weight: 700;
  }
+
+
 
  #main-img {
    flex: 1;
@@ -78,7 +78,8 @@
  }
 
  #main-left-section {
-   flex: 1
+   flex: 1;
+   padding-bottom: 28px;
  }
 
  @media screen and (max-width: 736px) {
