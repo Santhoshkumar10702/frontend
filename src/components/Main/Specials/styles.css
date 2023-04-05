@@ -42,6 +42,7 @@
     height: 185px;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
+    object-fit: cover;
   }
 
   #specials .specials-section .special .title-section {
@@ -76,6 +77,13 @@
     font-weight: 400;
     font-size: 16px;
     color: #495E57;
+  }
+
+  #specials .specials-section .special .special-info {
+    flex: 1;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
   }
 
   #specials .specials-section .special button {

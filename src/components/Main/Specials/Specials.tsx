@@ -1,5 +1,6 @@
-import { greekSalad } from '../../../icons_assets'
+import { Bruchetta, greekSalad } from '../../../icons_assets'
 import './styles.css'
+import bruchetta from '../../../icons_assets/bruchetta.svg'
 import { FaMotorcycle } from 'react-icons/fa';
 function Specials() {
   return (
@@ -25,13 +26,13 @@ function Specials() {
           </div>
         </div>
         <div className='special'>
-          <img src={greekSalad} />
-          <div>
+          <img src={bruchetta} />
+          <div className='special-info'>
             <div className='title-section'>
-              <h4>Greek salad</h4>
-              <p >$12.99</p>
+              <h4>Bruchetta</h4>
+              <p >$5.99</p>
             </div>
-            <p className='special-desc'>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
+            <p className='special-desc'>Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.</p>
             <button>Order a delivery&nbsp;<FaMotorcycle size={20} /></button>
           </div>
         </div>
