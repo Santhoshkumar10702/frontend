@@ -6,7 +6,7 @@
     margin-top: 72px;
   }
 
-  #specials .specials-left-section {
+  #specials .specials-top-section {
     display: flex;
     font-display: row;
     align-items: center;
@@ -21,7 +21,7 @@
 
     }
 
-    #specials .specials-left-section {
+    #specials .specials-top-section {
       width: calc(100% - 32px);
       align-self: center;
     }

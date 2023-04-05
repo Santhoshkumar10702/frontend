@@ -3,7 +3,7 @@ import './styles.css'
 function Specials() {
   return (
     <section id='specials'>
-      <div className='specials-left-section'>
+      <div className='specials-top-section'>
         <h1>
           This weeks specials!
         </h1>
