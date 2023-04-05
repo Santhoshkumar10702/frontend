@@ -1,95 +1,90 @@
- main {
-   align-items: center;
-   justify-content: center;
-   display: flex;
-   flex-direction: column;
- }
+main {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
 
- #main-top-section {
-   width: 100%;
-   background-color: #495E57;
-   align-items: center;
-   justify-content: center;
-   display: flex;
- }
+#main-top-section {
+  width: 100%;
+  background-color: #495e57;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
 
- #main-container {
-   display: flex;
-   flex-direction: row;
-   align-self: center;
-   max-width: 960px;
-   padding-left: 16px;
-   padding-right: 16px;
-   position: relative;
-   justify-content: space-between;
- }
+#main-container {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  max-width: 960px;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  justify-content: space-between;
+}
 
- #main-container h1 {
-   font-family: Roboto;
-   font-weight: 500;
-   color: #F4CE14;
-   margin: 0;
-   padding-top: 47px;
-   font-size: 56px;
- }
+.main-title {
+  font-family: Roboto;
+  font-weight: 500;
+  color: #f4ce14;
+  margin: 0;
+  padding-top: 47px;
+  font-size: 56px;
+}
 
- #main-container h3 {
-   font-family: 'Markazi Text';
-   font-weight: 500;
-   color: #F4CE14;
-   margin: 0;
-   font-size: 32px;
-   color: #FFFFFF;
- }
+.main-subtitle {
+  font-family: 'Markazi Text';
+  font-weight: 500;
+  color: #f4ce14;
+  margin: 0;
+  font-size: 32px;
+  color: #ffffff;
+}
 
+.main-p {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 72px;
+}
 
+.main-button {
+  background-color: #f4ce14;
+  border: 0;
+  border-radius: 16px;
+  padding: 19px 24px;
+  font-family: Roboto;
+  font-weight: 700;
+}
 
- #main-container div p {
-   font-family: Roboto;
-   font-weight: 400;
-   font-size: 20px;
-   color: #000000;
-   margin-bottom: 72px;
- }
+#main-img {
+  flex: 1;
+  position: relative;
+}
 
- .main-button {
-   background-color: #F4CE14;
-   border: 0;
-   border-radius: 16px;
-   padding: 19px 24px;
-   font-family: Roboto;
-   font-weight: 700;
- }
+#main-container img {
+  width: 375px;
+  height: 438px;
+  position: absolute;
+  margin-top: 24px;
+  border-radius: 16px;
+  right: 0;
+}
 
+#main-left-section {
+  flex: 1;
+  padding-bottom: 28px;
+}
 
+@media screen and (max-width: 736px) {
+  #main-img {
+    flex: 1.2;
+    position: relative;
+  }
 
- #main-img {
-   flex: 1;
-   position: relative;
- }
-
- #main-container img {
-   width: 375px;
-   height: 438px;
-   position: absolute;
-   margin-top: 24px;
-   border-radius: 16px;
-   right: 0;
- }
-
- #main-left-section {
-   flex: 1;
-   padding-bottom: 28px;
- }
-
- @media screen and (max-width: 736px) {
-   #main-img {
-     flex: 1.2;
-     position: relative;
-   }
-
-   #main-container img {
-     width: 100%;
-
-   }
- }
+  #main-container img {
+    width: 100%;
+  }
+}

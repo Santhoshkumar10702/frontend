@@ -1,8 +1,11 @@
+import {restaurant, restaurantFood} from '../../../icons_assets';
+import './styles.css';
+
 function Chicago() {
   return (
     <section id="chicago">
       <div id="chicago-info">
-        <div className="left-section">
+        <div id="chicago-left-section">
           <h1>Little Lemon</h1>
           <h3>Chicago</h3>
           <p>
@@ -15,8 +18,11 @@ function Chicago() {
             sint. Velit officia consequat duis enim velit mollit.
           </p>
         </div>
+        <div id="chicago-img-section">
+          <img src={restaurant} id="restaurant" />
+          <img src={restaurantFood} id="restaurant-food" />
+        </div>
       </div>
-      <div id="chicago-img-section"></div>
     </section>
   );
 }

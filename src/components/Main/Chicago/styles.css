@@ -8,3 +8,109 @@
   padding-bottom: 72px;
   background-color: #ffffff;
 }
+
+#chicago #chicago-info {
+  display: flex;
+  font-display: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 960px;
+  padding-bottom: 36px;
+}
+
+#chicago #chicago-info #chicago-left-section {
+  margin-bottom: auto;
+  margin-top: 72px;
+}
+
+#chicago #chicago-info #chicago-left-section,
+#chicago #chicago-info #chicago-img-section {
+  flex: 1;
+}
+
+#chicago #chicago-info #chicago-img-section {
+  position: relative;
+  padding-top: 200px;
+}
+
+#chicago #chicago-img-section img {
+  width: 276px;
+  height: 338px;
+  object-fit: cover;
+}
+
+#chicago #chicago-img-section #restaurant-food {
+  position: absolute;
+  left: 175px;
+  top: 97px;
+}
+
+#chicago-left-section h1 {
+  color: #f4ce14;
+  font-family: 'Markazi Text';
+  font-size: 64px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#chicago-left-section h3 {
+  color: #495e57;
+  font-family: 'Markazi Text';
+  font-size: 40px;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+#chicago-left-section p {
+  font-family: Karla;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 936px) {
+  #chicago #chicago-info #chicago-left-section {
+    padding-right: 64px;
+  }
+
+  #chicago #chicago-img-section #restaurant {
+    width: 60%;
+  }
+
+  #chicago #chicago-info #chicago-img-section {
+    padding-top: 100px;
+    left: -60px;
+  }
+
+  #chicago #chicago-img-section #restaurant-food {
+    left: 45%;
+    width: 60%;
+    top: 27px;
+  }
+
+  #chicago #chicago-info {
+    width: calc(100% - 32px);
+  }
+}
+
+@media screen and (max-width: 736px) {
+  #chicago #chicago-info #chicago-left-section {
+    padding-right: 0;
+  }
+
+  #chicago #chicago-info {
+    flex-direction: column;
+  }
+
+  #chicago #chicago-info #chicago-left-section {
+    margin-top: 0;
+  }
+
+  #chicago #chicago-info #chicago-img-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
