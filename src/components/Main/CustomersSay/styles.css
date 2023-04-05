@@ -9,6 +9,11 @@
   background-color: #d9d9d9;
 }
 
+#testimonials h1 {
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+
 #testimonials .ratings {
   display: flex;
   font-display: row;
@@ -17,5 +22,38 @@
   width: 100%;
   max-width: 960px;
   margin-bottom: 69px;
-  background-color: red;
+}
+
+#testimonials .ratings .rating {
+  width: 200px;
+  height: 175px;
+  background-color: white;
+  padding: 29px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#testimonials .ratings .rating .user-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#testimonials .ratings .rating .user-section img {
+  width: 46px;
+  height: 46px;
+  margin-right: 8px;
+}
+
+#testimonials .ratings .rating .user-section h4 {
+  font-family: Karla;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#testimonials .ratings .rating p {
+  font-family: Karla;
+  font-weight: 400;
+  font-size: 14px;
 }
