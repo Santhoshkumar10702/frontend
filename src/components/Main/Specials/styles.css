@@ -21,6 +21,7 @@
 #specials .specials-section {
   display: flex;
   font-display: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   max-width: 960px;
