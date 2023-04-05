@@ -17,11 +17,11 @@
 #testimonials .ratings {
   display: flex;
   font-display: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   max-width: 960px;
-  margin-bottom: 69px;
 }
 
 #testimonials .ratings .rating {
@@ -56,4 +56,15 @@
   font-family: Karla;
   font-weight: 400;
   font-size: 14px;
+}
+
+@media screen and (max-width: 736px) {
+  #testimonials .ratings {
+    width: calc(100% - 32px);
+  }
+
+  #testimonials .ratings .rating {
+    width: 100%;
+    margin-top: 16px;
+  }
 }
