@@ -1,9 +1,7 @@
-import './styles.css'
+import './styles.css';
 
 function CustomersSay() {
-  return (
-    <div>CustomersSay</div>
-  )
+  return <section id="testimonials">CustomersSay</section>;
 }
 
-export default CustomersSay
+export default CustomersSay;
