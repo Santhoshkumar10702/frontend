@@ -1,5 +1,7 @@
 import { restaurantFood } from "../../../icons_assets";
+
 import './styles.css'
+
 function Hero() {
   return (
     <section id='main-top-section'>

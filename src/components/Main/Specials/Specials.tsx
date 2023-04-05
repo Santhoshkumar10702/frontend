@@ -1,7 +1,10 @@
-import { Bruchetta, greekSalad, lemonDessert } from '../../../icons_assets'
-import './styles.css'
-import bruchetta from '../../../icons_assets/bruchetta.svg'
 import { FaMotorcycle } from 'react-icons/fa';
+
+import { greekSalad, lemonDessert } from '../../../icons_assets'
+import bruchetta from '../../../icons_assets/bruchetta.svg'
+
+import './styles.css'
+
 function Specials() {
   return (
     <section id='specials'>
