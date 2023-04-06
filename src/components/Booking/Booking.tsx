@@ -1,5 +1,7 @@
-import {submitAPI} from '../../utils';
 import BookingForm, {FormDataType} from './BookingForm';
+
+import {submitAPI} from '../../utils';
+
 import './styles.css';
 
 function Booking() {
