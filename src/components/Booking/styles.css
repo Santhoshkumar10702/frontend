@@ -46,6 +46,8 @@
   color: #495e57;
   border-width: 1px;
   border-color: #495e57;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 #booking form #submit-btn {
@@ -54,4 +56,21 @@
   font-family: Karla;
   font-weight: bold;
   cursor: pointer;
+}
+
+.inputError {
+  border-color: red !important;
+  color: red !important;
+}
+
+.errorMsg {
+  color: red !important;
+  font-weight: 500;
+  font-family: Karla;
+  font-size: 14px;
+}
+
+.book-item {
+  flex-direction: column;
+  display: flex;
 }
