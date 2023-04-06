@@ -1,10 +1,27 @@
+import {useFormik} from 'formik';
+
+import * as Yup from 'yup';
+
 import './styles.css';
 
 function Booking() {
+  const formik = useFormik({
+    initialValues: {
+      date: '',
+      time: '',
+      numberOfGuests: '',
+      occasion: '',
+    },
+    validationSchema,
+    onSubmit: values => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
+
   return (
     <section id="booking">
       <div className="booking-form-section">
-        <form>
+        <form onSubmit={formik.handleSubmit}>
           <h1>Booking</h1>
           <label htmlFor="res-date">Choose date</label>
           <input type="date" id="res-date" />
@@ -39,3 +56,10 @@ function Booking() {
 }
 
 export default Booking;
+
+const validationSchema = Yup.object({
+  date: Yup.string().required('Date is Required'),
+  time: Yup.string().required('Time is Required'),
+  numberOfGuests: Yup.string().required('Number of Guests is Required'),
+  occasion: Yup.string().required('Occasion is Required'),
+});
