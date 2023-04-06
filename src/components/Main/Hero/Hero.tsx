@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import {restaurantFood} from '../../../icons_assets';
 
 import './styles.css';
@@ -13,7 +14,9 @@ function Hero() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <button className="main-button">Reserve a table</button>
+          <Link to="/booking" className="main-button">
+            Reserve a table
+          </Link>
         </div>
         <div id="main-img">
           <img src={restaurantFood} />
