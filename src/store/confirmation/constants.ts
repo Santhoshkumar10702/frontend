@@ -1,0 +1,1 @@
+export const SET_CONFIRMATION = 'SET_CONFIRMATION';
