@@ -2,7 +2,10 @@ import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {act} from 'react-dom/test-utils';
 
+import * as authenticationActions from '../../store/confirmation/actions';
+
 import BookingForm from './BookingForm';
+import {SET_CONFIRMATION} from '../../store/confirmation/constants';
 
 test('Renders the BookingForm heading', () => {
   const handleSubmit = jest.fn();
@@ -80,5 +83,19 @@ test('user can submit valid values', async () => {
     time: '20:00',
     numberOfGuests: 12,
     occasion: 'Anniversary',
+  });
+});
+
+test('handles saving of confirmation info by user', () => {
+  const mockConfirmation = {
+    date: '2023-06-23',
+    time: '20:00',
+    numberOfGuests: 12,
+    occasion: 'Anniversary',
+  };
+
+  expect(authenticationActions.setConfirmation(mockConfirmation)).toEqual({
+    type: SET_CONFIRMATION,
+    payload: {value: mockConfirmation},
   });
 });
