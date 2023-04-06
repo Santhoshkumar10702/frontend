@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Main from './components/Main';
 import Booking from './components/Booking';
+import BookingConfirmation from './components/BookingConfirmation/BookingConfirmation';
 
 function BasicLayout() {
   return (
@@ -21,6 +22,7 @@ const App = () => (
       <Route path="/" element={<BasicLayout />}>
         <Route index element={<Main />} />
         <Route path="booking" element={<Booking />} />
+        <Route path="booking-confirmation" element={<BookingConfirmation />} />
       </Route>
     </Routes>
   </Router>
