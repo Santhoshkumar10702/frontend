@@ -1,8 +1,11 @@
+import {submitAPI} from '../../utils';
 import BookingForm, {FormDataType} from './BookingForm';
 import './styles.css';
 
 function Booking() {
-  const onSubmit = (values: FormDataType) => {};
+  const onSubmit = (values: FormDataType) => {
+    submitAPI(values);
+  };
 
   return (
     <section id="booking">
