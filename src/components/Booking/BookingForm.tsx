@@ -77,6 +77,7 @@ function BookingForm({onSubmit}: BookingFormProps) {
           name="date"
           data-testid="date"
           role="textbox"
+          min={initialDate}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.date}
