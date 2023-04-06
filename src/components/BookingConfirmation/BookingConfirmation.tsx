@@ -3,8 +3,9 @@ import {useConfirmationReducer} from '../../store';
 import './styles.css';
 
 function BookingConfirmation() {
-  const {state, actions} = useConfirmationReducer();
   const navigate = useNavigate();
+
+  const {state, actions} = useConfirmationReducer();
 
   const onChangeClick = () => {
     actions.setConfirmation(null);
