@@ -24,7 +24,9 @@ function BookingForm({onSubmit}: BookingFormProps) {
       occasion: 'Birthday',
     },
     validationSchema,
-    onSubmit,
+    onSubmit: values => {
+      onSubmit(values);
+    },
   });
 
   const dateError = formik.touched.date && formik.errors.date;
@@ -110,7 +112,12 @@ function BookingForm({onSubmit}: BookingFormProps) {
           <span className="errorMsg">{formik.errors.occasion}</span>
         ) : null}
       </div>
-      <input type="submit" id="submit-btn" value="Make Your reservation" />
+      <input
+        type="submit"
+        data-testid="submit-btn"
+        id="submit-btn"
+        value="Make Your reservation"
+      />
     </form>
   );
 }

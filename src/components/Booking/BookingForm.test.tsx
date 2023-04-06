@@ -73,5 +73,12 @@ test('user can submit valid values', async () => {
       screen.getByRole('option', {name: 'Anniversary'}),
     );
     userEvent.type(screen.getByTestId('guests'), '2');
+    userEvent.click(screen.getByTestId('submit-btn'));
+  });
+  expect(handleSubmit).toHaveBeenCalledWith({
+    date: '2023-06-23',
+    time: '20:00',
+    numberOfGuests: 12,
+    occasion: 'Anniversary',
   });
 });
