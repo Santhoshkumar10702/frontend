@@ -1,4 +1,5 @@
 import {restaurant, restaurantFood} from '../../../icons_assets';
+
 import './styles.css';
 
 function Chicago() {
