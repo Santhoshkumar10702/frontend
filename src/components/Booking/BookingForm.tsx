@@ -2,8 +2,20 @@ import {useFormik} from 'formik';
 
 import classNames from 'classnames';
 import * as Yup from 'yup';
+import {PropsWithChildren} from 'react';
 
-function BookingForm() {
+export type FormDataType = {
+  date: string;
+  time: string;
+  numberOfGuests: number;
+  occasion: string;
+};
+
+type BookingFormProps = PropsWithChildren<{
+  onSubmit: (values: FormDataType) => void;
+}>;
+
+function BookingForm({onSubmit}: BookingFormProps) {
   const formik = useFormik({
     initialValues: {
       date: '',
@@ -12,9 +24,7 @@ function BookingForm() {
       occasion: 'Birthday',
     },
     validationSchema,
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
-    },
+    onSubmit,
   });
 
   const dateError = formik.touched.date && formik.errors.date;
@@ -32,6 +42,8 @@ function BookingForm() {
           type="date"
           id="res-date"
           name="date"
+          data-testid="date"
+          role="textbox"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.date}
@@ -68,6 +80,7 @@ function BookingForm() {
           type="number"
           placeholder="1"
           min="1"
+          data-testid="guests"
           max="10"
           id="guests"
           name="numberOfGuests"

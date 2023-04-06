@@ -5,13 +5,15 @@ import {act} from 'react-dom/test-utils';
 import BookingForm from './BookingForm';
 
 test('Renders the BookingForm heading', () => {
-  render(<BookingForm />);
+  const handleSubmit = jest.fn();
+  render(<BookingForm onSubmit={handleSubmit} />);
   const headingElement = screen.getByText('Book Now');
   expect(headingElement).toBeInTheDocument();
 });
 
 test('should correctly set default values', () => {
-  render(<BookingForm />);
+  const handleSubmit = jest.fn();
+  render(<BookingForm onSubmit={handleSubmit} />);
 
   expect(
     (screen.getByRole('option', {name: '17:00'}) as HTMLOptionElement).selected,
@@ -24,7 +26,8 @@ test('should correctly set default values', () => {
 });
 
 test('change values on occasion options', async () => {
-  render(<BookingForm />);
+  const handleSubmit = jest.fn();
+  render(<BookingForm onSubmit={handleSubmit} />);
 
   await act(async () => {
     userEvent.selectOptions(
@@ -41,7 +44,8 @@ test('change values on occasion options', async () => {
 });
 
 test('change values on time options', async () => {
-  render(<BookingForm />);
+  const handleSubmit = jest.fn();
+  render(<BookingForm onSubmit={handleSubmit} />);
   await act(async () => {
     userEvent.selectOptions(
       // Find the select element, like a real user would.
@@ -53,4 +57,21 @@ test('change values on time options', async () => {
   expect(
     (screen.getByRole('option', {name: '20:00'}) as HTMLOptionElement).selected,
   ).toBe(true);
+});
+
+test('user can submit valid values', async () => {
+  const handleSubmit = jest.fn();
+  render(<BookingForm onSubmit={handleSubmit} />);
+  await act(async () => {
+    userEvent.type(screen.getByTestId('date'), '2023-06-23');
+    userEvent.selectOptions(
+      await screen.findByTestId('time'),
+      screen.getByRole('option', {name: '20:00'}),
+    );
+    userEvent.selectOptions(
+      await screen.findByTestId('occasion'),
+      screen.getByRole('option', {name: 'Anniversary'}),
+    );
+    userEvent.type(screen.getByTestId('guests'), '2');
+  });
 });
