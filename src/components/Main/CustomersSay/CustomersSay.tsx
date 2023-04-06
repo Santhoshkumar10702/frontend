@@ -30,17 +30,17 @@ export default CustomersSay;
 const reviews = [
   {
     name: 'Jasmine Smith',
-    review: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor',
+    review: '"Amet minim mollit non deserunt ullamco est sit aliqua dolor"',
     image: user1,
   },
   {
     name: 'Phil Jackson',
-    review: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor',
+    review: '"Amet minim mollit non deserunt ullamco est sit aliqua dolor"',
     image: user2,
   },
   {
     name: 'Kobe Bryant',
-    review: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor',
+    review: '"Amet minim mollit non deserunt ullamco est sit aliqua dolor"',
     image: user3,
   },
 ];
