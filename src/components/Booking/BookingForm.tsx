@@ -1,8 +1,10 @@
-import {useFormik} from 'formik';
+import {PropsWithChildren, useEffect, useId, useState} from 'react';
 
+import {useFormik} from 'formik';
 import classNames from 'classnames';
 import * as Yup from 'yup';
-import {PropsWithChildren} from 'react';
+
+import {fetchAPI} from '../../utils';
 
 export type FormDataType = {
   date: string;
@@ -15,10 +17,30 @@ type BookingFormProps = PropsWithChildren<{
   onSubmit: (values: FormDataType) => void;
 }>;
 
+const currentDate = new Date();
+const day = currentDate.getUTCDate();
+const month = currentDate.getUTCMonth() + 1;
+
+const initialDate = `${currentDate.getUTCFullYear()}-${
+  month < 10 ? `0${month}` : month
+}-${day < 10 ? `0${day}` : day}`;
+
+const initialTimes = [
+  '17:00',
+  '17:30',
+  '20:00',
+  '20:30',
+  '22:30',
+  '23:00',
+  '23:30',
+];
+
 function BookingForm({onSubmit}: BookingFormProps) {
+  const [timeOptions, setTimeOptions] = useState(initialTimes);
+
   const formik = useFormik({
     initialValues: {
-      date: '',
+      date: initialDate,
       time: '17:00',
       numberOfGuests: 1,
       occasion: 'Birthday',
@@ -34,6 +56,15 @@ function BookingForm({onSubmit}: BookingFormProps) {
   const numberOfGuestsError =
     formik.touched.numberOfGuests && formik.errors.numberOfGuests;
   const occasionError = formik.touched.occasion && formik.errors.occasion;
+
+  useEffect(() => {
+    if (!dateError && formik.values.date) {
+      const result = fetchAPI(new Date(formik.values.date));
+      setTimeOptions(result);
+    }
+  }, [formik.values.date, dateError]);
+
+  const id = useId();
 
   return (
     <form onSubmit={formik.handleSubmit}>
@@ -65,12 +96,11 @@ function BookingForm({onSubmit}: BookingFormProps) {
           onBlur={formik.handleBlur}
           value={formik.values.time}
           className={classNames({inputError: timeError})}>
-          <option value={'17:00'}>17:00</option>
-          <option value={'18:00'}>18:00</option>
-          <option value={'19:00'}>19:00</option>
-          <option value={'20:00'}>20:00</option>
-          <option value={'21:00'}>21:00</option>
-          <option value={'22:00'}>22:00</option>
+          {timeOptions.map((o, index) => (
+            <option key={`${id}-${index}`} value={o}>
+              {o}
+            </option>
+          ))}
         </select>
         {timeError ? (
           <span className="errorMsg">{formik.errors.time}</span>
