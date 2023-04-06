@@ -45,6 +45,7 @@ function BookingForm() {
         <label htmlFor="res-time">Choose time</label>
         <select
           id="res-time "
+          data-testid="time"
           name="time"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
@@ -84,6 +85,7 @@ function BookingForm() {
         <select
           id="occasion"
           name="occasion"
+          data-testid="occasion"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.occasion}
