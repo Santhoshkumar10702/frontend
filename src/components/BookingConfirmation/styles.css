@@ -25,3 +25,8 @@
   background-color: white;
   padding-bottom: 32px;
 }
+
+.change-confirmation {
+  margin-top: 32px;
+  cursor: pointer;
+}

@@ -59,6 +59,7 @@ main {
   font-weight: 700;
   text-decoration: none;
   color: #000;
+  cursor: pointer;
 }
 
 #main-img {
