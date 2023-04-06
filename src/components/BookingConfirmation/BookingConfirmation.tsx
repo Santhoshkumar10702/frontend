@@ -41,7 +41,16 @@ function BookingConfirmation() {
             </button>
           </div>
         ) : (
-          <h1>No Booking Confirmed at the Moment</h1>
+          <div id="no-booking">
+            <h1>No Booking Confirmed at the Moment</h1>
+            <button
+              onClick={() => {
+                navigate('/booking');
+              }}
+              className="main-button change-confirmation">
+              Reserve a table
+            </button>
+          </div>
         )}
       </div>
     </section>
