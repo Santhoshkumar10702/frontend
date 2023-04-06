@@ -25,7 +25,7 @@ function BookingForm() {
 
   return (
     <form onSubmit={formik.handleSubmit}>
-      <h1>Book now</h1>
+      <h1>Book Now</h1>
       <div className="book-item">
         <label htmlFor="res-date">Choose date</label>
         <input
