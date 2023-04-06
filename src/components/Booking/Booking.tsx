@@ -24,16 +24,35 @@ function Booking() {
         <form onSubmit={formik.handleSubmit}>
           <h1>Booking</h1>
           <label htmlFor="res-date">Choose date</label>
-          <input type="date" id="res-date" />
+          <input
+            type="date"
+            id="res-date"
+            name="date"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.date}
+          />
+          {formik.touched.date && formik.errors.date ? (
+            <span>{formik.errors.date}</span>
+          ) : null}
+
           <label htmlFor="res-time">Choose time</label>
-          <select id="res-time ">
-            <option>17:00</option>
-            <option>18:00</option>
-            <option>19:00</option>
-            <option>20:00</option>
-            <option>21:00</option>
-            <option>22:00</option>
+          <select
+            id="res-time "
+            name="time"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.time}>
+            <option value={'17:00'}>17:00</option>
+            <option value={'18:00'}>18:00</option>
+            <option value={'19:00'}>19:00</option>
+            <option value={'20:00'}>20:00</option>
+            <option value={'21:00'}>21:00</option>
+            <option value={'22:00'}>22:00</option>
           </select>
+          {formik.touched.time && formik.errors.time ? (
+            <span>{formik.errors.time}</span>
+          ) : null}
           <label htmlFor="guests">Number of guests</label>
           <input
             type="number"
@@ -42,12 +61,27 @@ function Booking() {
             defaultValue={1}
             max="10"
             id="guests"
+            name="numberOfGuests"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.numberOfGuests}
           />
+          {formik.touched.numberOfGuests && formik.errors.numberOfGuests ? (
+            <span>{formik.errors.numberOfGuests}</span>
+          ) : null}
           <label htmlFor="occasion">Occasion</label>
-          <select id="occasion">
-            <option>Birthday</option>
-            <option>Anniversary</option>
+          <select
+            id="occasion"
+            name="occasion"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.occasion}>
+            <option value="Birthday">Birthday</option>
+            <option value="Anniversary">Anniversary</option>
           </select>
+          {formik.touched.occasion && formik.errors.occasion ? (
+            <span>{formik.errors.occasion}</span>
+          ) : null}
           <input type="submit" id="submit-btn" value="Make Your reservation" />
         </form>
       </div>
