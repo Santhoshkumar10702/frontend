@@ -1,77 +1,79 @@
 nav {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
 }
 
 #menu-burger {
-    display: none;
+  display: none;
 }
 
 nav ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
 }
 
-
-
 nav ul li {
-    margin-left: 36px;
+  margin-left: 36px;
 }
 
 nav ul li a {
-    font-size: 20px;
-    font-weight: 500;
-    text-decoration: none;
-    color: #000000;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #000000;
 }
 
-
+.active-nav {
+  font-weight: bold;
+  font-size: 23px;
+}
+.inactive-nav {
+  font-weight: 400;
+}
 
 @media screen and (max-width: 736px) {
-    #menu-burger {
-        display: flex;
-        background-color: #495E57;
-        padding: 6px 10px;
-        cursor: pointer;
-        color: #F4CE14;
-    }
+  #menu-burger {
+    display: flex;
+    background-color: #495e57;
+    padding: 6px 10px;
+    cursor: pointer;
+    color: #f4ce14;
+  }
 
-    nav ul {
-        flex-direction: column;
-        position: absolute;
-        left: 0;
-        top: 64px;
-        width: calc(100%);
-        background-color: #495E57;
-        z-index: 999;
-        border-bottom: 1px solid #F4CE14;
-    }
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 64px;
+    width: calc(100%);
+    background-color: #495e57;
+    z-index: 999;
+    border-bottom: 1px solid #f4ce14;
+  }
 
-    nav ul {
-        padding-top: 8px;
-        padding-bottom: 8px;
-        padding-left: 0;
-    }
+  nav ul {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 0;
+  }
 
-    nav ul li {
-        margin-left: 0;
-        text-align: center;
-        padding-bottom: 6px;
-    }
+  nav ul li {
+    margin-left: 0;
+    text-align: center;
+    padding-bottom: 6px;
+  }
 
-    nav ul li a {
-        color: #F4CE14;
-    }
+  nav ul li a {
+    color: #f4ce14;
+  }
 
+  .show {
+    display: flex;
+  }
 
-    .show {
-        display: flex;
-    }
-
-    .hide {
-        display: none;
-    }
-
+  .hide {
+    display: none;
+  }
 }
