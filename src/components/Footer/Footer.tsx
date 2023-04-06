@@ -1,4 +1,5 @@
-import {retaurantChef} from '../../../icons_assets';
+import {retaurantChef} from '../../icons_assets';
+
 import './styles.css';
 
 function Footer() {
