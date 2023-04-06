@@ -14,7 +14,7 @@ function CustomersSay() {
         {reviews.map((r, i) => (
           <div key={`${id}-${i}`} className="rating">
             <div className="user-section">
-              <img src={r.image} />
+              <img alt="" src={r.image} />
               <h4>{r.name}</h4>
             </div>
             <p>{r.review}</p>

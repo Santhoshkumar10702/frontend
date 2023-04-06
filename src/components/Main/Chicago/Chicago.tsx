@@ -20,8 +20,8 @@ function Chicago() {
           </p>
         </div>
         <div id="chicago-img-section">
-          <img src={restaurant} id="restaurant" />
-          <img src={restaurantFood} id="restaurant-food" />
+          <img alt="" src={restaurant} id="restaurant" />
+          <img alt="" src={restaurantFood} id="restaurant-food" />
         </div>
       </div>
     </section>

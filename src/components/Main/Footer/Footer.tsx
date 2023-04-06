@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer id="footer">
       <div id="footer-info">
-        <img src={retaurantChef} />
+        <img alt="" src={retaurantChef} />
         <div className="footer-links-section">
           <div>
             <h4>Quick links</h4>
