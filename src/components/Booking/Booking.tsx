@@ -1,9 +1,9 @@
 import {useFormik} from 'formik';
 
+import classNames from 'classnames';
 import * as Yup from 'yup';
 
 import './styles.css';
-import classNames from 'classnames';
 
 function Booking() {
   const formik = useFormik({
