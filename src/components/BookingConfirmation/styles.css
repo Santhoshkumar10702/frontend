@@ -1,0 +1,26 @@
+#booking-confirmation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 72px;
+  flex-direction: column;
+  background-color: #d9d9d9;
+}
+
+#booking-confirmation h1 {
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+
+#booking-confirmation .booking-confirmation-section {
+  display: flex;
+  font-display: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 960px;
+  margin: 16px;
+  background-color: white;
+}
