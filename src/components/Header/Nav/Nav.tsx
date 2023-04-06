@@ -3,6 +3,7 @@ import {useState} from 'react';
 import classNames from 'classnames';
 
 import './styles.css';
+import {Link} from 'react-router-dom';
 
 function Nav() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -11,7 +12,7 @@ function Nav() {
     <nav>
       <ul className={classNames({show: toggleMenu, hide: !toggleMenu})}>
         <li>
-          <a href="#">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <a href="#">About</a>
@@ -20,7 +21,7 @@ function Nav() {
           <a href="#">Menu</a>
         </li>
         <li>
-          <a href="#">Reservations</a>
+          <Link to="/booking-confirmation">Reservations</Link>
         </li>
         <li>
           <a href="#">Order Online</a>

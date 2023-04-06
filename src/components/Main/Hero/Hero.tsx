@@ -2,8 +2,11 @@ import {Link} from 'react-router-dom';
 import {restaurantFood} from '../../../icons_assets';
 
 import './styles.css';
+import {useConfirmationReducer} from '../../../store';
 
 function Hero() {
+  const confirmation = useConfirmationReducer();
+
   return (
     <section id="main-top-section">
       <div id="main-container">
@@ -14,7 +17,13 @@ function Hero() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <Link to="/booking" className="main-button">
+          <Link
+            to={
+              confirmation.state.confirmation
+                ? '/booking-confirmation'
+                : '/booking'
+            }
+            className="main-button">
             Reserve a table
           </Link>
         </div>
