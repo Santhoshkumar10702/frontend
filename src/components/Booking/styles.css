@@ -1,0 +1,25 @@
+#booking {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 72px;
+  flex-direction: column;
+  padding-bottom: 72px;
+  background-color: #d9d9d9;
+}
+
+#booking h1 {
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+
+#booking .booking-form {
+  display: flex;
+  font-display: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 960px;
+}
