@@ -5,7 +5,6 @@
   justify-content: center;
   margin-top: 72px;
   flex-direction: column;
-  padding-bottom: 72px;
   background-color: #d9d9d9;
 }
 
@@ -14,12 +13,45 @@
   padding-bottom: 16px;
 }
 
-#booking .booking-form {
+#booking .booking-form-section {
   display: flex;
   font-display: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   max-width: 960px;
+}
+
+#booking form {
+  display: grid;
+  max-width: 200px;
+  gap: 20px;
+  background-color: white;
+  margin: 16px;
+  padding: 0 32px 32px 32px;
+}
+
+#booking form label {
+  color: #495e57;
+  font-weight: 500;
+  font-family: Karla;
+  font-size: 16px;
+}
+
+#booking form input,
+#booking form select {
+  padding: 12px;
+  border-radius: 8px;
+  color: #495e57;
+  border-width: 1px;
+  border-color: #495e57;
+}
+
+#booking form #submit-btn {
+  background-color: #495e57;
+  color: #f4ce14;
+  font-family: Karla;
+  font-weight: bold;
+  cursor: pointer;
 }
